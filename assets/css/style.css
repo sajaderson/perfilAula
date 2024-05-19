@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --text-color: #fff;
     --border-color: rgba(255, 255, 255, 0.1);
@@ -177,6 +181,20 @@ section a {
     padding: 10px 20px;
 }
 
+section p {
+    font-size: 18px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+section h2 {
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
 section#sectionInicio {
     display: flex;
     justify-content: space-between;
@@ -194,25 +212,94 @@ section#sectionInicio h1 {
     margin-bottom: 20px;
 }
 
-section#sectionInicio h2 {
-    font-size: 25px;
-    font-weight: normal;
-    margin-bottom: 20px;
-}
-
-section#sectionInicio p {
-    font-size: 18px;
-    font-weight: lighter;
-    margin-bottom: 20px;
-    line-height: 1.7;
-    text-align: justify;
-}
-
 section#sectionInicio img {
     width: 100%;
     border-radius: 50%;
     border: 2px solid var(--text-color);
 }
+
+section#sobreMim {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section#sobreMim>div {
+    width: 49%;
+    min-width: 300px;
+}
+
+#sobreMimGradeFotos {
+    display: flex;
+    gap: 20px;
+}
+
+.sobreMimFotos {
+    margin-bottom: 20px;
+}
+
+#sobreMimFotosColuna2 {
+    padding-top: 50px;
+}
+
+section#sobreMim img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+section#sobreMim h2 {
+    font-weight: bolder;
+}
+
+#sobreMimRodape {
+    display: flex;
+    gap: 10px;
+}
+
+.sobreMimQuantidade {
+    display: flex;
+    width: 160px;
+}
+
+.sobreMimQuantidade p:first-child {
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.sobreMimQuantidade p:last-child {
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+section#servico #servicoGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: 49%;
+    min-width: 300px;
+    background: var(--background-header);
+    margin-bottom: 20px;
+    padding: 40px;
+}
+
+.card:hover {
+    background: var(--details);
+}
+
+section#servico h2 {
+    font-weight: bolder;
+}
+
+/* ################ Portfólio ################## */
+
+
+
 
 @media (max-width: 1200px) {
     #headerH {
@@ -231,11 +318,14 @@ section#sectionInicio img {
     #botao-menu:checked ~ #headerV {
         margin-left: 0;
     }
+
+    section#servico h2 {
+        margin-top: 70px;
+    }
 }
 
 @media (max-width: 690px) {
     section#sectionInicio {
-        border: 1px solid red;
         justify-content: center;
     }
 
@@ -244,6 +334,25 @@ section#sectionInicio img {
     }
 
     section#sectionInicio #inicioFoto {
-        margin: 0 auto;
+        margin: 50px 0 auto;
     }
+
+    section#sobreMim #sobreMimTexto {
+        width: 100%;
+    }
+
+    section#sobreMim #sobreMimGradeFotos {
+        margin: 50px 0 auto;
+        width: 100%;
+    }
+    
+    section#servico .card {
+        width: 100%;
+    }
+
+    .portfolioCardImg {
+        width: 100%;
+        margin-bottom: 200px;
+    }
+    
 }
